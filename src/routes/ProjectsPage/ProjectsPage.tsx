@@ -38,7 +38,7 @@ function ProjectsPage(props: { "data-project-page": string }) {
   const [entryKey, setEntryKey] = useState("");
 
   const projectPage = PROJECTS[props["data-project-page"]];
-  const entries = projectPage.projects;
+  const timesOrSubcategories = projectPage.projects;
 
   const bgClasses = `bgimage ${projectPage.background} fixed bg-fixed`;
 
@@ -46,17 +46,17 @@ function ProjectsPage(props: { "data-project-page": string }) {
     <>
       <div className={bgClasses}></div>
       <div className="lg:h-full lg:align-middle lg:items-center dark:bg-transparent">
-        {Object.keys(entries).map(eType => {
-          const entryCategory = entries[eType];
-          return <div key={eType} className="px-2 sm:px-4 lg:px-8">
+        {Object.keys(timesOrSubcategories).map(entryTimeOrSubcategoryKey => {
+          const entryTimeOrSubcategory = timesOrSubcategories[entryTimeOrSubcategoryKey];
+          return <div key={entryTimeOrSubcategoryKey} className="px-2 sm:px-4 lg:px-8">
             <div className="w-full md:w-72 p-2 mt-8 mb-2 dark:bg-neutral-900/90 rounded-lg w-fit">
-              <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{entryCategory.title}</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{entryTimeOrSubcategory.title}</h1>
             </div>
             <div className="align-middle md:flex flex-wrap justify-start">
-              {Object.keys(entryCategory.entries).map(key => {
-                const entry = entryCategory.entries[key];
+              {Object.keys(entryTimeOrSubcategory.entries).map(key => {
+                const entry = entryTimeOrSubcategory.entries[key];
                 return <Card onClick={() => {
-                  setEntryType(eType);
+                  setEntryType(entryTimeOrSubcategoryKey);
                   setEntryKey(key);
                   setOpenModal(true);
                 }} key={key} imgAlt={entry.title} imgSrc={entry.image} className="w-full md:w-72 my-2 md:mr-4 lg:mr-8 last:mr-0 cursor-pointer dark:bg-neutral-900/90 dark:border-none">
@@ -77,12 +77,12 @@ function ProjectsPage(props: { "data-project-page": string }) {
       </div>
       <Modal dismissible show={openModal} onClose={() => setOpenModal(false)} theme={modalTheme}>
         <Modal.Header>
-          <span>{entries[entryType]?.entries[entryKey]?.title}</span>
-          {entries[entryType]?.entries[entryKey]?.link &&
-            <><span>&nbsp;</span><a href={entries[entryType]?.entries[entryKey]?.link} target="_blank" rel="noreferrer"><Button color="orange" theme={buttonTheme} className="inline">{entries[entryType]?.entries[entryKey]?.link}</Button></a></>
+          <span>{timesOrSubcategories[entryType]?.entries[entryKey]?.title}</span>
+          {timesOrSubcategories[entryType]?.entries[entryKey]?.link &&
+            <><span>&nbsp;</span><a href={timesOrSubcategories[entryType]?.entries[entryKey]?.link} target="_blank" rel="noreferrer"><Button color="orange" theme={buttonTheme} className="inline">{timesOrSubcategories[entryType]?.entries[entryKey]?.link}</Button></a></>
           }
         </Modal.Header>
-        <Modal.Body dangerouslySetInnerHTML={{ __html: entries[entryType]?.entries[entryKey]?.longDesc }}></Modal.Body>
+        <Modal.Body dangerouslySetInnerHTML={{ __html: timesOrSubcategories[entryType]?.entries[entryKey]?.longDesc }}></Modal.Body>
       </Modal>
     </>
   );

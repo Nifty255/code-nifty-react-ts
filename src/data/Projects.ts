@@ -8,7 +8,7 @@ type Project = {
   longDesc: string
 };
 
-type Timespan = {
+type TimeOrSubcategory = {
   title: string,
   entries: Record<string, Project>
 };
@@ -17,7 +17,7 @@ type Category = {
   route: string,
   label: string,
   background: string,
-  projects: Record<string, Timespan>
+  projects: Record<string, TimeOrSubcategory>
 };
 
 const PROJECTS: Record<string, Category> = {
@@ -281,6 +281,6 @@ const PROJECTS: Record<string, Category> = {
 export default PROJECTS;
 export type {
   Project,
-  Timespan,
+  TimeOrSubcategory as Timespan,
   Category
 };
