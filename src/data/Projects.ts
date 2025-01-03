@@ -134,8 +134,8 @@ const PROJECTS: Record<string, Category> = {
             "year": "2020-Present",
             "company": "Personal",
             "techs": [
-              "JavaScript",
-              "React.js",
+              "TypeScript",
+              "React + Vite",
               "Nginx",
               "Tailwind CSS"
             ],
