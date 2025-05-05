@@ -47,9 +47,9 @@ function Main() {
         <div className="md:flex flex-row grow justify-between">
           <Card className="my-2 mx-2 sm:mx-4 lg:mx-4 basis-full md:basis-1/2 dark:bg-neutral-900/90 dark:border-transparent">
             <div className="basis-full">
-              <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-4"><img alt="Nifty255" className="w-8 h-8 mr-2 lg:w-0 lg:h-0 lg:m-0 float-start rounded-full" src="https://i.imgur.com/UW15CZz.jpg" />I'm Nifty</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-4"><img alt="Nifty255" className="w-8 h-8 mr-2 lg:w-0 lg:h-0 lg:m-0 float-start rounded-full" src="/img/nifty.jpeg" />I'm Nifty</h1>
               <div>
-                <img alt="Nifty255" className="w-0 h-0 m-0 lg:w-16 lg:h-16 lg:mr-2 lg:mt-[7px] float-start rounded-full" src="https://i.imgur.com/UW15CZz.jpg" />
+                <img alt="Nifty255" className="w-0 h-0 m-0 lg:w-16 lg:h-16 lg:mr-2 lg:mt-[7px] float-start rounded-full" src="/img/nifty.jpeg" />
                 <p>I'm a software and mod developer, gamer, and general VR and technology enthusiast. My strengths are in backend systems, but I enjoy learning a variety of technologies.</p>
                 <br />
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">Defining traits:</h3>

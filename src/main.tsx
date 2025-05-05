@@ -11,6 +11,8 @@ import ErrorPage from "./ErrorPage";
 
 import Routes from "./Routes";
 
+document.getElementById("loader")?.remove();
+
 const router = createBrowserRouter([
   {
     path: "/",
