@@ -80,7 +80,7 @@ const PROJECTS: Record<string, Category> = {
             ],
             "longDesc": `
               <p class="pb-4">Quest Mode was an influencer engagement tool which allows one's fans to go on "quests" (micro-sponsorships) in order to earn rewards, such as free tips to the influencer, free subscriptions to the influencer's Twitch channel, and/or free damage Boss in the integrated minigame, Boss Battles.</p>
-              <p>Quest Mode is an Angular Material application powered by a monolithic Ruby on Rails API (where most of my work was done). As of October 2020, over 1.5 million sponsorship events have been recorded through various forms of attribution.</p>
+              <p>Quest Mode was an Angular Material application powered by a monolithic Ruby on Rails API (where most of my work was done). As of October 2020, over 1.5 million sponsorship events have been recorded through various forms of attribution.</p>
             `
           },
           "imp": {
@@ -95,8 +95,8 @@ const PROJECTS: Record<string, Category> = {
               "MongoDB"
             ],
             "longDesc": `
-              <p class="pb-4">The Influencer Management Portant (or "IMP") is a web-based multitenant portal designed to allow influencers, their teams, and any number of sponsors, to all connect with each other, set requirements, ensure team/brand compliance, and set tasks for the influencer to accomplish.</p>
-              <p>IMP is an Angular Material application powered by a monolithic Ruby on Rails API, both of which I've worked on. First launched in late 2018, IMP is now home to over 50,000 influencers, around 20 teams, and 10 sponsors. Features include programmatic compliance via quests and goals which reward the influencer, a store and raffle system influencers can spend their rewards, on-stream carousels, Twitch chat bot commands, and timed messages.</p>
+              <p class="pb-4">The Influencer Management Portant (or "IMP") was a web-based multitenant portal designed to allow influencers, their stream or eSports teams, and any number of sponsors, to connect with each other, set requirements, ensure team/brand compliance, and set tasks for the influencer to accomplish.</p>
+              <p>IMP was an Angular Material application powered by a monolithic Ruby on Rails API, both of which I've worked on. First launched in late 2018, IMP is quickly became a home for over 50,000 influencers, around 20 teams, and 10 sponsors. Features included programmatic compliance via quests and goals which reward the influencer, a store and raffle system influencers can spend their rewards, on-stream carousels, Twitch chat bot commands, and timed messages.</p>
             `
           },
           "gatherbot": {
@@ -111,8 +111,8 @@ const PROJECTS: Record<string, Category> = {
               "MongoDB"
             ],
             "longDesc": `
-              <p class="pb-4">Written in Go, the Opera Event Twitch chat bots are a set of bots built within a high volume, multipurpose chat processing pipeline which handles almost 500 chat messages per second (with room to grow) for the purposes of analytics, command processing, and timed message tracking.</p>
-              <p>Using a microservices architecture, RabbitMQ for messaging, and Redis for caching, and deployed into a Kubernetes cluster, the pipeline listened redundantly and losslessly to over 50,000 Twitch channels 24/7. Additionally, the chat pipeline could process commands from a streamer, their team, or any number of their sponsors all within milliseconds, track the state and timers of thousands of timed messages, and store every single incoming message (almost 1TB per month!) into Elasticsearch for later analysis.</p>
+              <p class="pb-4">Written in Go, the Opera Event Twitch chat bots were built within a high volume, multipurpose chat processing pipeline which handled almost 500 chat messages per second (with room to grow) for the purposes of analytics, command processing, and timed message tracking.</p>
+              <p>Using a microservices architecture, RabbitMQ for messaging, and Redis for caching, and deployed into a Kubernetes cluster, the pipeline listened with redundancy and idempotence to over 50,000 Twitch channels 24/7. Additionally, the chat pipeline could process commands from a streamer, their team, or any number of their sponsors all within milliseconds, track the state and timers of thousands of timed messages, and store every single incoming message (almost 1TB per month!) into Elasticsearch for later analysis.</p>
             `
           }
         }
